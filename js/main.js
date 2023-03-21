@@ -88,7 +88,7 @@ $(function() {
    });//한페이지씩 이동
 
    $('.slick').slick({
-      slidesToShow : 4,
+      slidesToShow : 1,
       appendArrows : $('.btn_arrows'),
       prevArrow : '.prev',
       nextArrow : '.next',
@@ -126,4 +126,38 @@ $(function() {
       asNavFor : '.slick',
       focusOnSelect: true
    })
+
+   $('.graphic ul').masonry({
+   // options
+   // columnWidth: 200
+      // fitWidth : true,
+      itemSelector: '.graphic li'
+   });
+   
+   lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+
+   var imgH = $('.nav_img img').height();
+   console.log(imgH)
+   $('.nav_img .empty').css({'height' : imgH});
+   $('.nav_img .empty').css({'line-height' : imgH + 'px'});
+
+   
+   $('.project .btns button.web_btn').click(function() {
+      $('.project .btns button').removeClass('on')
+      $(this).addClass('on')
+      $('.project .web').css({'height' : 'auto'})
+      $('.project .slick').css({'padding-bottom' : '80px'})
+      $('.project .graphic').css({'height' : '0'})
+   })
+   $('.project .btns button.design_btn').click(function() {
+      $('.project .btns button').removeClass('on')
+      $(this).addClass('on')
+      $('.project .web').css({'height' : '0'})
+      $('.project .slick').css({'padding-bottom' : '0'})
+      $('.project .graphic').css({'height' : 'auto'})
+   })
+
 })

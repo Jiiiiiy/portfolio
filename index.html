@@ -4,14 +4,18 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="img/logo.png">
    <title>Portfolio</title>
    <link rel="stylesheet" href="css/slick.css">
+   <link rel="stylesheet" href="css/lightbox.css">
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="js/jquery.easypiechart.js"></script>
    <script src="js/slick.js"></script>
+   <script src="js/lightbox.js"></script>
+   <script src="js/masonry.pkgd.js"></script>
    <script src="js/main.js"></script>
 </head>
 <body>
@@ -91,10 +95,10 @@
             <div class="inner">
                <h2 class="blind">PROJECT</h2>
                   <div class="btns">
-                     <button class="on">WEB/APP</button>
-                     <button>DESIGN</button>
-                  </div>
-               <ul class="slick">
+                     <button class="on web_btn">WEB/APP</button>
+                     <button class="design_btn">DESIGN</button>
+                  </div><!-- //.btns -->
+               <ul class="slick web">
                   <li class="clrfix">
                      <h3 class="blind">할리스</h3>
                      <div class="infor">
@@ -139,18 +143,28 @@
                   <li class="clrfix">
                   </li>
                </ul><!-- //.slick -->
-               <ul class="nav_img">
+               <ul class="nav_img web">
                   <li><img src="img/hollys.png" alt=""></li>
                   <li><img src="img/komsco.png" alt=""></li>
                   <li><img src="img/figma_1.png" alt=""></li>
-                  <li><div style="height: 80px;color:#9e9e9e;line-height: 80px;text-align: center;">empty</div></li>
-               </ul>
+                  <li><div class="empty" style="color:#9e9e9e;text-align: center;">empty</div></li>
+               </ul><!-- //.nav_img web -->
+               <div class="graphic">
+                  <ul>
+                     <li><a href="img/graphic_img/masonry01.jpg" data-lightbox="graphic"><img src="img/graphic_img/masonry01.jpg" alt=""></a></li>
+                     <li><a href="img/graphic_img/masonry02.jpg" data-lightbox="graphic"><img src="img/graphic_img/masonry02.jpg" alt=""></a></li>
+                     <li><a href="img/graphic_img/masonry03.jpg" data-lightbox="graphic"><img src="img/graphic_img/masonry03.jpg" alt=""></a></li>
+                     <li><a href="img/graphic_img/masonry04.jpg" data-lightbox="graphic"><img src="img/graphic_img/masonry04.jpg" alt=""></a></li>
+                     <li><a href="img/graphic_img/masonry05.jpg" data-lightbox="graphic"><img src="img/graphic_img/masonry05.jpg" alt=""></a></li>
+                  </ul>
+               </div>
             </div><!-- //.inner -->
          </div><!-- //.container -->
       </section>
       <section class="contact">
          <div class="container">
             <h2 class="blind">CONTACT</h2>
+            <p>Thank you</p>
          </div><!-- //.container -->
       </section>
    </main>
