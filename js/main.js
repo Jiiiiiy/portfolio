@@ -36,6 +36,39 @@ $(function() {
       $(this).addClass('on')
    })//nav click event
 
+   var timer = null;
+   $(window).scroll(function() { //wrap header 스타일 변경 적용
+      if(timer) {
+         clearTimeout(timer);
+      }
+      timer + setTimeout(secnum, 500);
+   });
+
+   var secnum = function() {
+      var tTop = $(this).scrollTop();
+      // let n = $('section').index()
+      // $('nav li').eq(n).addClass('on');
+
+      var sec1Top = $('.home').offset().top;
+      var sec1Bottom = sec1Top + $('.home').innerHeight();
+      if(tTop >= sec1Top && tTop < sec1Bottom){
+         $('nav li').removeClass('on');
+         $('nav li:nth-child(1)').addClass('on');
+      }
+      var sec2Top = $('.profile').offset().top;
+      var sec2Bottom = sec2Top + $('.profile').innerHeight();
+      if(tTop >= sec2Top && tTop < sec2Bottom){
+         $('nav li').removeClass('on');
+         $('nav li:nth-child(2)').addClass('on');
+      }
+      var sec3Top = $('.project').offset().top;
+      var sec3Bottom = sec3Top + $('.project').innerHeight();
+      if(tTop >= sec3Top && tTop < sec3Bottom){
+         $('nav li').removeClass('on');
+         $('nav li:nth-child(3)').addClass('on');
+      }
+   }
+
    $('section').each(function (i) {
       // 개별적으로 Wheel 이벤트 적용
       // .on('event',function() {})
@@ -140,7 +173,6 @@ $(function() {
     })
 
    var imgH = $('.nav_img img').height();
-   console.log(imgH)
    $('.nav_img .empty').css({'height' : imgH});
    $('.nav_img .empty').css({'line-height' : imgH + 'px'});
 
@@ -159,5 +191,6 @@ $(function() {
       $('.project .slick').css({'padding-bottom' : '0'})
       $('.project .graphic').css({'height' : 'auto'})
    })
+
 
 })
