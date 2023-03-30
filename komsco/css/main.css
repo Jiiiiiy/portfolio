@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;1,700&display=swap');
 
+.skip_nav a {display: block;padding: 15px;font-size: 16px;background: var(--red);color: #FFF;position: fixed;left: 0;top: -46px;z-index: 999;}
+.skip_nav a:focus {top: 0;}
+
 html {overflow-y: hidden;}
 body {font-family: 'Noto Sans', "NanumSquare", serif;box-sizing: border-box;}
 .container {width: 1200px;margin: auto;}
