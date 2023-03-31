@@ -40,12 +40,17 @@ header .utility .sitemap span {display: block;width: 25px;height: 2px;margin-bot
 
 .apartment_wrap {padding: 200px 0 340px;background: #ebebeb;}
 .apartment_wrap ul {display: flex;}
-.apartment_wrap ul li::before {content: "";display: block;width: 100%;height: 365px;background: url(../img/imageView.jpg) no-repeat center , #FFF;border-top-right-radius: 50%;background-size: cover;}
-.apartment_wrap ul li {width: 300px;}
+.apartment_wrap ul li {position: relative;display: block;width: calc((100% - 300px) / 4);border-top-right-radius: 50%;}
 .apartment_wrap ul li+li {margin-left: 100px;}
-.apartment_wrap ul li .open {display: block;color: #555;font-weight: 700;margin-top: 45px;}
+.apartment_wrap ul li .img_layout {position: relative;display: block;width: 100%;height: 365px;background: #FFF;border-top-right-radius: 50%;}
+.apartment_wrap ul li .img_layout img {height: 365px;position: absolute;left: 50%;transform: translateX(-50%);}
+
+.apartment_wrap ul li .txt_box {padding-top: 45px;height: 300px;border-bottom-right-radius: 50%;}/*background: #FFF;*/
+
+.apartment_wrap ul li .open {display: block;color: #555;font-weight: 700;}
 .apartment_wrap ul li strong {display: block;margin: 30px 0;font-size: 20px;}
-.apartment_wrap ul li .date {color: #808080;font-size: 14px;font-weight: 700;}
+.apartment_wrap ul li .date {display: block;margin-bottom: 40px;color: #808080;font-size: 14px;font-weight: 700;}
+.apartment_wrap ul li a {display: inline-block;padding: 15px 16px;border: 1px solid #DDD;color: #6b6b6b;font-size: 12px;}
 
 .apartment_wrap .more_btn {display: block;margin-top: 190px;font-size: 14px;font-weight: 900;}
 
