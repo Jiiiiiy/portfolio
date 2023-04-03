@@ -70,12 +70,6 @@ $(function() {
    }
 
    $('section').each(function (i) {
-      // 개별적으로 Wheel 이벤트 적용
-      // .on('event',function() {})
-      // .click(function() {})
-
-
-      //https://codepen.io/akfelqldhs/pen/eGdgNm 
       $(this).on("mousewheel DOMMouseScroll", function(evt) {
          evt.preventDefault();
          let delta = 0;
