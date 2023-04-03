@@ -64,28 +64,26 @@ $(function() {
       var liLength = $(".exhibit_wrap ul li").length;
 
       if($has.index() + 1 <= liLength - 1) {
-      $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on')
-      .next().addClass('on').fadeIn(800).end(4000);
-      $('.exhibit_wrap .exhibit_btns button.on').removeClass('on').next().addClass('on');
+         $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on')
+         .next().addClass('on').fadeIn(800);
+         $('.exhibit_wrap .exhibit_btns button.on').removeClass('on').next().addClass('on');
 
       } else if($has.index() + 1 > liLength - 1) {
-         // $('.exhibit_wrap ul li:first').addClass('on')
-         clearInterval(exhibit)
-         $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on')
-         $('.exhibit_wrap ul li:first').addClass('on').fadeIn(800).end(4000);
-         $('.exhibit_wrap .exhibit_btns button').removeClass('on')
-         $('.exhibit_wrap .exhibit_btns button:first').addClass('on')
+         $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on');
+         $('.exhibit_wrap ul li:first').addClass('on').fadeIn(800);
+         $('.exhibit_wrap .exhibit_btns button').removeClass('on');
+         $('.exhibit_wrap .exhibit_btns button:first').addClass('on');
       };
       
    };
 
-      $('.exhibit_wrap .exhibit_btns button').click(function() {
-         var i = $(this).index();
-         $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on')
-         $('.exhibit_wrap ul li').eq(i).addClass('on').fadeIn(800).end(4000)
-         $('.exhibit_wrap .exhibit_btns button').removeClass('on')
-         $(this).addClass('on')
-      })
+   $('.exhibit_wrap .exhibit_btns button').click(function() {
+      var i = $(this).index();
+      $('.exhibit_wrap ul li.on').fadeOut(800).removeClass('on');
+      $('.exhibit_wrap ul li').eq(i).addClass('on').fadeIn(800);
+      $('.exhibit_wrap .exhibit_btns button').removeClass('on');
+      $(this).addClass('on');
+   })
    setInterval(exhibit, 4000)
 
    function GnbUl() {
@@ -255,12 +253,6 @@ $(function() {
    function scrollEvent() {
 
       $('main>div').each(function (i) {
-         // 개별적으로 Wheel 이벤트 적용
-         // .on('event',function() {})
-         // .click(function() {})
-
-
-         //https://codepen.io/akfelqldhs/pen/eGdgNm 
          $(this).on("mousewheel DOMMouseScroll", function(evt) {
             evt.preventDefault();
             let delta = 0;
