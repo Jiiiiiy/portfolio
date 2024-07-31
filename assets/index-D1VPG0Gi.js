@@ -231,10 +231,6 @@ table {
   }
   @media screen and (max-width: 1400px) {
     width: 100%;
-
-    h1 {
-      font-size: 32px;
-    }
   }
 `,w0=z.div`
   position: relative;
@@ -453,6 +449,10 @@ table {
   font-family: SokchoBadaCalligraphy;
   font-size: 40px;
   line-height: 100px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 32px;
+  }
 `,O0=z.ul`
   display: flex;
   flex-direction: row;
