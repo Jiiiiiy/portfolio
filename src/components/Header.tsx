@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-import { MainLink } from '../css/styled-component'
-// import { FlexBox } from '../css/styled-component'
-
-// type CustomMouseEvent = MouseEvent<HTMLElement>
+import { MainLink } from '../styles/styled-component'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = ({ onCategory, category }: any) => {
@@ -50,14 +47,12 @@ const HeaderLayout = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100px;
-  background-color: #f9f9f9;
+  height: 80px;
+  background-color: #333333;
+  color: #ffffff;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
-
-  @media screen and (max-width: 1400px) {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 `
 const HeaderContainerSize = styled.div`
   width: 1400px;
@@ -73,18 +68,23 @@ const HeaderRow = styled.div`
 const Logo = styled.h1`
   font-family: SokchoBadaCalligraphy;
   font-size: 40px;
-  line-height: 100px;
+  line-height: 80px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 32px;
+  }
 `
 const CategoryList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  line-height: 100px;
+  line-height: 80px;
 
   @media screen and (max-width: 1024px) {
     opacity: 0;
   }
 `
+
 const CategoryItem = styled.li`
   display: inline-block;
   margin-left: 30px;

@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
-import WebImgBox from '../components/WebImgBox'
-import { ContainerSizeFlex } from '../css/styled-component'
-import ProfileContainer from './Profile'
-import ProjectContainer from './Project'
+import { ContainerSizeFlex } from '../styles/styled-component'
+import ProjectContainer from './project/'
+import ProfileContainer from './profile/'
 
 const MainContainer = () => {
   const [category, setCategory] = useState('Profile')
   const content1Ref = useRef<HTMLDivElement>(null)
   const content2Ref = useRef<HTMLDivElement>(null)
-
-  // const onContent1Cli
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleCategory = (e: any) => {
@@ -37,7 +34,7 @@ const MainContainer = () => {
         category={category}
       />
       <ContainerSizeFlex>
-        <WebImgBox />
+        {/* <WebImgBox /> */}
         {width > 1024 && category == `Profile` ? (
           <ProfileContainer />
         ) : width > 1024 && category == `Project` ? (

@@ -1,23 +1,23 @@
 import styled from 'styled-components'
 
-export const Layout = styled.div`
+export const ProfileLayout = styled.div`
   margin-top: 100px;
-  width: 50%;
-  padding: 30px 0;
-  padding-left: 30px;
+  width: 60%;
+  padding: 30px 120px;
+  padding-right: 0;
   margin-bottom: 50px;
   position: relative;
+  box-sizing: border-box;
+  transition: all 0.3s;
 
+  @media screen and (max-width: 1400px) {
+    padding: 30px 50px;
+  }
   @media screen and (max-width: 1024px) {
     width: 100%;
     margin-top: 100px;
     padding: 30px 20px;
     padding-bottom: 50px;
-    box-sizing: border-box;
-
-    &:last-child {
-      margin-top: 0;
-    }
 
     &::after {
       content: '';
@@ -25,18 +25,33 @@ export const Layout = styled.div`
       display: block;
       position: absolute;
       bottom: 0;
-      width: calc(100% - 40px);
+      width: calc(100% - 100px);
       height: 1px;
       background-color: #dedede;
-      // background-color: red;
-    }
-
-    &:last-child::after {
-      display: none;
     }
   }
+`
+
+export const ProjectLayout = styled.div`
+  margin-top: 100px;
+  width: 100%;
+  padding: 30px 0;
+  padding-right: 0;
+  margin-bottom: 50px;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 0.3s;
+
   @media screen and (max-width: 1400px) {
-    padding: 30px 20px;
+    padding: 30px 50px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    margin-top: 0;
+    padding: 30px 30px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
   }
 `
 
@@ -45,16 +60,13 @@ export const ContainerSize = styled.div`
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
+  border: 1px solid red;
 
-  @media screen and (max-width: 1024px) {
-    padding: 0 20px;
-  }
   @media screen and (max-width: 1400px) {
     width: 100%;
-
-    h1 {
-      font-size: 32px;
-    }
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px;
   }
 `
 
@@ -66,12 +78,11 @@ export const ContainerSizeFlex = styled.div`
   margin: 0 auto;
   box-sizing: border-box;
 
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-  }
-
   @media screen and (max-width: 1400px) {
     width: 100%;
+  }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
   }
 `
 
@@ -84,7 +95,7 @@ export const PageLink = styled.a`
 `
 export const MainLink = styled.a`
   text-decoration: none;
-  color: #333;
+  color: inherit;
 `
 
 export const TitleH2 = styled.h2`
@@ -118,8 +129,15 @@ export const ProjectTitleH3Center = styled.h3`
   transition: all 0.3s;
 `
 
-// ProjectModal
-
+// export const ModalBackground = styled.div`
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 999;
+// `
 export const ModalBackground = styled.div`
   position: fixed;
   top: 0;
@@ -130,11 +148,33 @@ export const ModalBackground = styled.div`
   z-index: 999;
 `
 
+// export const ProjectModal = styled.div`
+//   position: relative;
+//   width: 80%;
+//   height: calc(100vh - 200px);
+//   margin: 100px auto;
+//   background-color: #ffffff;
+//   box-sizing: border-box;
+//   overflow-y: scroll;
+//   -ms-overflow-style: none;
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   @media screen and (max-width: 1024px) {
+//     width: 100%;
+//     margin: 30px auto;
+//     height: calc(100vh - 60px);
+//   }
+// `
+
 export const ProjectModal = styled.div`
-  position: relative;
-  width: 80%;
+  position: fixed;
+  top: 100px;
+  width: 1400px;
+  left: calc(50% - 700px);
   height: calc(100vh - 200px);
-  margin: 100px auto;
+  z-index: 999;
   background-color: #ffffff;
   box-sizing: border-box;
   overflow-y: scroll;
@@ -143,9 +183,14 @@ export const ProjectModal = styled.div`
     display: none;
   }
 
+  @media screen and (max-width: 1400px) {
+    width: 80%;
+    left: 10%;
+  }
   @media screen and (max-width: 1024px) {
-    width: 100%;
-    margin: 30px auto;
+    width: calc(100% - 40px);
+    top: 30px;
+    left: 20px;
     height: calc(100vh - 60px);
   }
 `
@@ -175,9 +220,8 @@ export const ButtonBox = styled.div`
   height: 60px;
   position: sticky;
   top: 0;
-  // border-bottom: 1px solid #dedede;
   background-color: #ffffff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   z-index: 980;
   @media screen and (max-width: 1024px) {
   }
@@ -192,11 +236,8 @@ export const CloseButton = styled.button`
 
 export const WebImgBox = styled.div`
   width: 680px;
-
-  // width: 100%;
   margin: 0 auto;
   margin-top: 50px;
-  border: 5px solid #ededed;
   border-radius: 2px;
   box-sizing: border-box;
 
@@ -253,6 +294,22 @@ export const TitleH4 = styled.h4`
   font-family: SokchoBadaCalligraphy;
   font-size: 1.5rem;
   line-height: 1.8rem;
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    background-color: #333333;
+    transform: rotate(135deg);
+    border-radius: 15%;
+  }
 `
 
 export const Description = styled.span`
@@ -266,14 +323,13 @@ export const TextBoxGray = styled.span`
 `
 
 export const Ul = styled.ul`
-  padding: 15px 0;
+  padding: 15px 0 50px;
 `
 
 export const List = styled.li`
   position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 7px;
+  display: block;
+  margin-bottom: 10px;
   padding-left: 12px;
 
   &::before {
@@ -281,11 +337,24 @@ export const List = styled.li`
     clear: both;
     display: block;
     position: absolute;
-    top: 6px;
+    top: 7px;
     left: 0;
-    width: 5px;
-    height: 5px;
-    background-color: #333;
+    width: 7px;
+    height: 7px;
+    background: radial-gradient(rgba(255, 255, 255, 0), #333333);
     border-radius: 50%;
+  }
+`
+export const ListDetailUl = styled.ul`
+  padding-top: 6px;
+`
+export const ListDetail = styled.li`
+  padding: 4px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
   }
 `
