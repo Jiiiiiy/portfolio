@@ -18,7 +18,7 @@ const PurewithmeDetail = () => {
   return (
     <PhoneProjectLayout>
       <PhoneImgBox>
-        <PhoneImg src="dist/img/purewithme.png" />
+        <PhoneImg src="img/purewithme.png" />
       </PhoneImgBox>
       <DetailBox>
         <TitleBox>

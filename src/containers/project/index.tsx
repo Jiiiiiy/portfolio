@@ -128,7 +128,7 @@ const List = styled.li`
   margin-right: 20px;
 
   &.purewithme {
-    background: #000 url('dist/img/purewithme.png') 50% no-repeat;
+    background: #000 url('img/purewithme.png') 50% no-repeat;
     background-size: contain;
   }
 
