@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const ProfileLayout = styled.div`
-  margin-top: 100px;
+  margin-top: 80px;
   width: 60%;
   padding: 30px 120px;
   padding-right: 0;
-  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
   transition: all 0.3s;
@@ -25,9 +24,14 @@ export const ProfileLayout = styled.div`
       display: block;
       position: absolute;
       bottom: 0;
-      width: calc(100% - 100px);
+      width: calc(100% - 40px);
       height: 1px;
       background-color: #dedede;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &::after {
+      width: calc(100% - 40px);
     }
   }
 `
@@ -49,7 +53,7 @@ export const ProjectLayout = styled.div`
   @media screen and (max-width: 1024px) {
     width: 100%;
     margin-top: 0;
-    padding: 30px 30px;
+    padding: 30px 20px;
     padding-bottom: 50px;
     box-sizing: border-box;
   }
@@ -75,6 +79,7 @@ export const ContainerSizeFlex = styled.div`
   display: flex;
   flex-direction: row;
   width: 1400px;
+  height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -129,15 +134,6 @@ export const ProjectTitleH3Center = styled.h3`
   transition: all 0.3s;
 `
 
-// export const ModalBackground = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   z-index: 999;
-// `
 export const ModalBackground = styled.div`
   position: fixed;
   top: 0;
@@ -147,26 +143,6 @@ export const ModalBackground = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 `
-
-// export const ProjectModal = styled.div`
-//   position: relative;
-//   width: 80%;
-//   height: calc(100vh - 200px);
-//   margin: 100px auto;
-//   background-color: #ffffff;
-//   box-sizing: border-box;
-//   overflow-y: scroll;
-//   -ms-overflow-style: none;
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
-
-//   @media screen and (max-width: 1024px) {
-//     width: 100%;
-//     margin: 30px auto;
-//     height: calc(100vh - 60px);
-//   }
-// `
 
 export const ProjectModal = styled.div`
   position: fixed;
@@ -200,6 +176,14 @@ export const WebProjectLayout = styled.div`
   display: flex;
   flex-direction: column-reverse;
   padding: 80px 80px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 30px 20px;
+  }
 `
 
 export const PhoneProjectLayout = styled.div`
@@ -210,6 +194,9 @@ export const PhoneProjectLayout = styled.div`
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     padding: 50px 40px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 30px 20px;
   }
 `
 
