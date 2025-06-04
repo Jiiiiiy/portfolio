@@ -83,7 +83,7 @@ const ProfileContainer = forwardRef(({ content1Ref }: any) => {
 export default ProfileContainer
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 `
 
 const Ul = styled.ul``

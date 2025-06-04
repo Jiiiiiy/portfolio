@@ -27,8 +27,8 @@ const drift2 = keyframes`
 const Container = styled.div`
   position: relative;
   width: 40%;
-  height: calc(100vh - 160px);
-  margin-top: 130px;
+  margin-top: 110px;
+  margin-bottom: 30px;
   padding: 50px;
   box-sizing: border-box;
   overflow: hidden;
