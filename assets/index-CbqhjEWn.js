@@ -190,11 +190,10 @@ table {
     transition: all 0.3s;
   }
   `,xm=N.div`
-  margin-top: 100px;
+  margin-top: 80px;
   width: 60%;
   padding: 30px 120px;
   padding-right: 0;
-  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
   transition: all 0.3s;
@@ -214,9 +213,14 @@ table {
       display: block;
       position: absolute;
       bottom: 0;
-      width: calc(100% - 100px);
+      width: calc(100% - 40px);
       height: 1px;
       background-color: #dedede;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &::after {
+      width: calc(100% - 40px);
     }
   }
 `,wm=N.div`
@@ -236,7 +240,7 @@ table {
   @media screen and (max-width: 1024px) {
     width: 100%;
     margin-top: 0;
-    padding: 30px 30px;
+    padding: 30px 20px;
     padding-bottom: 50px;
     box-sizing: border-box;
   }
@@ -258,6 +262,7 @@ table {
   display: flex;
   flex-direction: row;
   width: 1400px;
+  height: 100vh;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -338,6 +343,14 @@ table {
   display: flex;
   flex-direction: column-reverse;
   padding: 80px 80px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 30px 20px;
+  }
 `,Ad=N.div`
   position: relative;
   display: flex;
@@ -346,6 +359,9 @@ table {
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     padding: 50px 40px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 30px 20px;
   }
 `,Pm=N.div`
   display: flex;
@@ -621,8 +637,8 @@ table {
 `,bm=N.div`
   position: relative;
   width: 40%;
-  height: calc(100vh - 160px);
-  margin-top: 130px;
+  margin-top: 110px;
+  margin-bottom: 30px;
   padding: 50px;
   box-sizing: border-box;
   overflow: hidden;
@@ -680,7 +696,7 @@ table {
   opacity: 0.9;
   filter: brightness(0.2);
 `;var Ss=(e=>(e.White="#ffffff",e.Black="#000000",e.Black900="#111111",e.Gray50="#f9f9f9",e.Gray100="#bbbbbb",e.Gray150="#eeeeee",e.Gray200="#e2e2e2",e.Gray300="#d9d9d9",e.Gray400="#4b4b4b",e.Gray500="#4e4e4e",e.Gray600="#828282",e.Gray700="#9ba1aa",e.Gray800="#2c3041",e.Blue500="#3456d1",e.Blue600="#3994ff",e.Red100="#fbeaea",e.Red500="#f66b38",e.Red600="#d43131",e.Green300="#e6f7e6",e.Green500="#275e2f",e.Purple500="#9e53ff",e.Kakao="#371c1d",e))(Ss||{});const Xa=we.forwardRef(({content1Ref:e})=>p.jsxs(p.Fragment,{children:[p.jsx(Zm,{}),p.jsxs(xm,{id:"Profile",ref:e,children:[p.jsx(Cm,{children:"Profile"}),p.jsxs(ml,{children:[p.jsx(hl,{children:"About Me"}),p.jsxs(rg,{children:[p.jsx(ig,{children:"성장을 추구하는 개발자"}),p.jsx(di,{children:" 안녕하세요! 꾸준한 성장을 위해 노력하는 프론트엔드 개발자 김지영입니다."}),p.jsx(di,{children:" 저는"}),p.jsxs(di,{children:["  1. 사용자의 입장에서 편리한 인터페이스는 무엇인지 끊임없이 고민하며, ",p.jsx("br",{}),"  2. 유지 보수의 유용함에 대해 고려하고, ",p.jsx("br",{}),"  3. 생각의 결과를 시각적으로 표출할 수 있도록 노력하고 있는 개발자입니다."]}),p.jsx(di,{children:" 새로움을 두려워하지 않고 모르는 것을 부끄러워하지 않고 배우려하는 마음으로 임하겠습니다."}),p.jsx(ng,{children:"#책임감 #꼼꼼함 #노력파"})]}),p.jsxs(gl,{children:[p.jsx(Za,{children:"e-mail : zhiying5@naver.com"}),p.jsxs(Za,{children:["github : ",p.jsx($r,{href:"https://github.com/Jiiiiiy",target:"_blank",children:"https://github.com/Jiiiiiy"})]})]})]}),p.jsxs(ml,{children:[p.jsx(hl,{children:"Career"}),p.jsx(gl,{children:p.jsxs(tg,{children:[p.jsx(fi,{children:"2024.10 - 2025.03"})," 리퓨어헬스케어"]})})]}),p.jsxs(ml,{children:[p.jsx(hl,{children:"Education"}),p.jsxs(gl,{children:[p.jsxs(vl,{children:[p.jsx(fi,{children:"2024.02"})," 프론드엔드 개발자 스쿨_제로베이스 수료"]}),p.jsxs(vl,{children:[p.jsx(fi,{children:"2023.12"})," 웹디자인 기능사 자격증 취득"]}),p.jsxs(vl,{children:[p.jsx(fi,{children:"2022.09"})," 웹디자인 및 스마트 UI/UX 웹퍼블리셔 양성과정 수료"]})]})]})]})]})),ml=N.div`
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 `,gl=N.ul``,Za=N.li`
   margin-bottom: 7px;
   color: #aaaaaa;
